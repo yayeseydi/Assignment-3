@@ -75,8 +75,9 @@ To check the status of your firewall:
 > Note: Unfortunately I ran into some issues in this step and was unable to properly configure the firewall. I kept getting the error: 
 `Job for nftables.service failed because the control process exited with error code.
 See "systemctl status nftables.service" and "journalctl -xeu nftables.service" for details.`
-
 I tried troubleshooting, butI just kept getting blocked and running into the same error over and over again. Everything else seems to be working fine in the nginx.config file as well as the server_block. I was also able to install ufw. The issue occured when it came time to the command `sudo ufw allow http` and `sudo ufw allow http`. As a result everytime I try to go to http://154.20.162.135/ (my Ip address) I get a "This site can't be reached error".
+
+
 
 Some ways we can enhance the generate_index step include:
 - Adding more system information such as CPU usage, memory usage, disk space, and uptime.
@@ -104,7 +105,6 @@ The following scripts are in the git repository:
   `sudo systemctl start generate-index.timer`
 - Ensure nginx is installed and running:
   - Test configuration with `sudo nginx -t`.
-  - Reload nginx with `sudo systemctl reload nginx`.
 - Configure UFW to allow SSH and HTTP:
   - `sudo ufw allow ssh`
   - `sudo ufw allow http`
