@@ -1,0 +1,14 @@
+[Unit]
+
+Description=Generate Index HTML File
+
+[Service]
+User=webgen
+
+Group=webgen
+
+ExecStart=/var/lib/webgen/generate_index
+
+[Install]
+
+WantedBy=multi-user.target
