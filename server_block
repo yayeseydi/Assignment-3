@@ -1,0 +1,20 @@
+  server {
+# Listen on IPv4 address for HTTP requests on port 80
+    listen 80;
+# Listen on IPv6 address for HTTP requests on port 80
+    listen [::]:80;
+
+    server_name 154.20.162.135;
+
+#  This is the root for the web server
+    root /var/lib/webgen/HTML;
+  
+# Default file
+  index index.html;
+
+ # Process requests to the root and subdirectories
+ location / {
+# If not found it checks for the directory  ($uri/). If neither the file or directory is found, it will produce the code below
+        try_files $uri $uri/ =404;
+    }
+}
