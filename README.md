@@ -72,7 +72,7 @@ To check the status of your firewall:
 - `sudo ufw status verbose` – This command will show detailed information about the firewall status and active rules.
 
 ---
-Note: Unfortunately I ran into some issues in this step and was unable to properly configure the firewall. I kept getting the error: 
+> Note: Unfortunately I ran into some issues in this step and was unable to properly configure the firewall. I kept getting the error: 
 `Job for nftables.service failed because the control process exited with error code.
 See "systemctl status nftables.service" and "journalctl -xeu nftables.service" for details.`
 
